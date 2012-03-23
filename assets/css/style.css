@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+#cover .title 
+{
+	width: 100%;
+	margin-top: 25%;
+	text-align: center;
+	font-family: "Teen Light";
+	font-size: 50px;
+}
+
+#cover .load
+{
+	margin-left: 45%;
+	margin-top: 10%;
+	margin-bottom: 55%;
+}
+
+#home h1
+{
+	margin: 20%;
+	font-size: 50px;
+	font-family: "Teen Light";
+}
+
+#home #colors
+{
+	height: 1000px;
+	width: 100%;
+}
+
+#colors
+{
+	float: left;
+}
+
+#colors #first
+{
+	width: 20%;
+	height: 100%;
+	background-color: #ff0000;
+	float: left;
+}
+
+#colors #second
+{
+	width: 20%;
+	height: 100%;
+	background-color: #ffda91;
+	float: left;
+}
+
+#colors #third
+{
+	width: 20%;
+	height: 100%;
+	background-color: #47b26b;
+	float: left;
+}
+
+#colors #fourth
+{
+	width: 20%;
+	height: 100%;
+	background-color: #0066ff;
+	float: left;
+}
+
+#colors #fifth
+{
+	width: 20%;
+	height: 100%;
+	background-color: #003366;
+	float: left;
+}
