@@ -16,6 +16,11 @@
 	margin-bottom: 55%;
 }
 
+#home h1
+{
+	font-family: "Teen Light";
+}
+
 #home .logo
 {
 	background-color: black;
