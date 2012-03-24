@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 	function startLocating(){
-		//getLocation();
+		getLocation();
 		interval=setInterval(getLocation, 300000)}
 
 	function getLocation(){
@@ -17,6 +17,7 @@ $(document).ready(function(){
 		// PhoneGap is ready
 
 		function onDeviceReady() {
+			var x=coordinate.length();
 			navigator.geolocation.getCurrentPosition(onSuccess, onError);
 		}
 
@@ -24,7 +25,7 @@ $(document).ready(function(){
 
 		function onSuccess(position) {
 		i++;
-			var element = document.getElementById('geolocation');
+			//var element = document.getElementById('geolocation');
 			// element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
 								// 'Longitude: '          + position.coords.longitude             + '<br />' +
 								// 'Altitude: '           + position.coords.altitude              + '<br />' +
@@ -36,9 +37,6 @@ $(document).ready(function(){
 
 
 			coordinate[i]=position.coords;
-
-
-
 		}
 		// onError Callback receives a PositionError object
 		//
@@ -46,11 +44,15 @@ $(document).ready(function(){
 			alert('code: '    + error.code    + '\n' +
 				  'message: ' + error.message + '\n');
 		}
-
+	
+		var y=coordinate.length();
 	  }
 
-	function stopLocating(){clearInterval(interval);}
-	$.ajax({
+	if (x!=y){ajaxPost;}
+	
+	function ajaxPost(){
+		console.log('ajax request sent');
+		$.ajax({
 		url: $.config.home_site_root+'',
 		type: 'POST',
 		data:JSON.stringify(coordinate),
@@ -61,7 +63,9 @@ $(document).ready(function(){
 			alert("ERR");
 		}
 	});
+	}
 	
-function distTravel(){};
+	function distTravel(){};
 
-});
+	function stopLocating(){clearInterval(interval);}
+}
