@@ -4,11 +4,11 @@
 /**
  * Home Page
  */
- 
+
 body
 {
-	background-color: black;	
-	
+	background-color: black;
+
 }
 
 .header-bg
@@ -103,7 +103,7 @@ body
 	border-radius: 10px;
 }
 
-#gallery li 
+#gallery li
 {
 	list-style: none;
 	float: left;
@@ -165,7 +165,7 @@ body
 	border-radius: 10px;
 }
 
-#hof li 
+#hof li
 {
 	float: left;
 	width: 310px;

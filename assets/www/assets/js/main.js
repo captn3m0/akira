@@ -4,12 +4,12 @@ $('#start_button').click(function(){
 	});
 
 $('#peopleli').click( function() {
-	$.getJSON('path', function(data) {
+	$.getJSON('users', function(data) {
 		console.log ("done");
 		html='';
 		for (i in data)
 		{
-			html+='<li><div class="name">'+data[i].name+'</div><div class="number">'+data[i].number+'</div><div class="car">'+data[i].car+'</div><div class="distance">'+data[i].distance+' miles</div><div class="image"><img src='+data[i].url+'></div></li>';
+			html+='<li><div class="name">'+data[i].name+'</div><div class="number">'+data[i].number+'</div><div class="car">'+data[i].car+'</div><div class="distance">'+data[i].distance+' miles</div><div class="image"><img src='+data[i].pic+'></div></li>';
 		}
 		$('#gallery').html(html);
 	});
@@ -17,14 +17,14 @@ $('#peopleli').click( function() {
 
 $('#hofli').click( function() {
 
-	$.getJSON('path', function(data) {
+	$.getJSON('users', function(data) {
 
 		console.log('done');
 		html='';
 		rank=1;
 		for (i in data)
 		{
-			html+='<li><div class="rank">'+rank+'</div><div class="name">'+data[i].name+'</div><div class="number">'+data[i].number+'</div><div class="car">'+data[i].car+'</div><div class="distance">'+data[i].distance+' miles</div><div class="image"><img src='+data[i].url+'></div></li>';
+			html+='<li><div class="rank">'+rank+'</div><div class="name">'+data[i].name+'</div><div class="number">'+data[i].number+'</div><div class="car">'+data[i].car+'</div><div class="distance">'+data[i].distance+' miles</div><div class="image"><img src='+data[i].pic+'></div></li>';
 		}
 		$('#hof').html(html);
 	});
