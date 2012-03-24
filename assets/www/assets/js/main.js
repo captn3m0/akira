@@ -31,5 +31,13 @@ $('#hofli').click( function() {
 	});
 });
 
-
-
+$('#submit').click(function(e){
+	$.post('/login',{email:$('#email').val(),password:$('#password').val()},function(session){
+		if(session.length==41)
+			localStorage.setItem('session',session);
+		else
+			alert("Wrong password");
+		document.location.reload();
+	});
+	e.preventDefault();
+});
