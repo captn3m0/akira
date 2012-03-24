@@ -46,12 +46,12 @@
 			alert('code: '    + error.code    + '\n' +
 				  'message: ' + error.message + '\n');
 		}
-	
+
 		var y=coordinate.length;
 	  }
 
 	if (x!=y){
-	
+
 	checkConnection = function (){
         var networkState = navigator.network.connection.type;
 
@@ -71,12 +71,11 @@
 		else {ajaxPost();
 		calculateDistances()}}
 	}
-	
-	
+
 	function ajaxPost(){
 		console.log('ajax request sent');
 		$.ajax({
-		url: $.config.home_site_root+'',
+		url: 'journey/ping',
 		type: 'POST',
 		data:JSON.stringify(coordinate),
 		success:function(){
@@ -87,10 +86,9 @@
 		}
 	});
 	}
-	
-	
-
+	function distTravel(){};
 	function stopLocating(){clearInterval(interval);}
+
 	
 	$.ajax({
 	//url:'/journey/list/?session=6fe2b9f12c9c1e75477674ff0365f8698734a36b',
@@ -100,13 +98,19 @@
 	});
 	
 	
+
+});
+
+
       var map;
       var geocoder;
       var bounds = new google.maps.LatLngBounds();
       var markersArray = [];
+
       
       var origin = new google.maps.LatLng(o1, o2);
       var destination = new google.maps.LatLng(d1, d2);
+
 
       var destinationIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000";
       var originIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000";
@@ -120,7 +124,7 @@
         map = new google.maps.Map(document.getElementById('map'), opts);
         geocoder = new google.maps.Geocoder();
       }
-    
+
       function calculateDistances() {
         var service = new google.maps.DistanceMatrixService();
         service.getDistanceMatrix(
@@ -180,7 +184,7 @@
           }
         });
       }
-      
+
       function deleteOverlays() {
         if (markersArray) {
           for (i in markersArray) {

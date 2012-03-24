@@ -2,21 +2,11 @@
 <html>
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>jQuery Mobile Web App</title>
-<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
-<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
-<script src="./assets/js/jquery-1.5.min.js"></script>
-<script src="./assets/js/jquery.mobile-1.0a3.min.js"></script>
-<script src="./assets/js/config.js"></script>
-
-<script src="./assets/js/lawnchair-0.6.1.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application.
-	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
-<script src="./assets/js/cordova-1.5.0.js"></script>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
+	<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<title>Akira | Cars for socialites</title>
 
 </head>
 <body >
@@ -35,7 +25,10 @@
    	 			<label for="password">Password:</label>
    		 		<input type="password" name="password" id="password" value="" />
 			</div>
-    	</div>    
+			<div data-role="fieldcontain">
+   		 		<input type="submit" name="login" id="submit" value="Login" />
+			</div>
+    	</div>
         <ul id="toggle" class="choice" data-role="listview">
 			<li id="journeyli"><a href="#journey">Start New Journey</a></li>
             <li id="peopleli"><a href="#people">People Around Me</a></li>
@@ -106,8 +99,6 @@
 		<div class="photo"></div>
 	</div>
 </div>
-
-
 <div data-role="page" id="hof">
 	<div data-role="header">
 		<h1>Hall of Fame</h1>
@@ -137,17 +128,16 @@
         </ul>
 	</div>
 	<div data-role="footer">
-		
+
 	</div>
 </div>
-
 <!--Include scripts at the bottom -->
 <script src="./assets/js/jquery-1.5.min.js"></script>
 <script src="./assets/js/jquery.mobile-1.0a3.min.js"></script>
 <script src="./assets/js/config.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="./assets/js/geo.js"></script>
 <script src="./assets/js/cordova-1.5.0.js"></script>
 <script src="./assets/js/main.js"></script>
-
 </body>
 </html>
