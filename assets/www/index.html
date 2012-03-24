@@ -7,12 +7,7 @@
 	<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
 	<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
-
-<!--<div data-role="page" id="cover">
-	<div class="title">Hello</div>
-    <img class="load" src="images/load.png">
-</div>-->
+<body >
 
 <div data-role="page" id="home">
 	<div class="header-bg" data-role="header">
@@ -22,13 +17,14 @@
 
         <div class="logo"></div>
         <ul class="choice" data-role="listview">
-			<li><a href="#journey">Start New Journey</a></li>
-            <li><a href="#people">People Around Me</a></li>
-			<li><a href="#details">Login</a></li>
+			<li id="journeyli"><a href="#journey">Start New Journey</a></li>
+            <li id="peopleli"><a href="#people">People Around Me</a></li>
+			<li id="detailsli"><a href="#details">Add Car Details</a></li>
 		</ul>
 
 	</div>
-	<div id="colors" data-position="fixed">
+   
+	<div id="colors">
     	<div id="first"></div>
         <div id="second"></div>
         <div id="third"></div>
@@ -39,13 +35,13 @@
 
 <div data-role="page" style="height:100%" id="journey">
 	<div data-role="header">
-		<h1>Start New Journey</h1>
+		<h1 id="start">Start New Journey</h1>
 	</div>
     <div data-role="content" style="height:100%;" align="center">
         <div id="start_button" class="geo_button" data-role="button" data-inline="true" data-theme="b" onclick="startLocating()">
             Get Rolling!
         </div>
-        <div id="stop_button" data-role="button" data-inline="true" data-theme="b" style="display:none;" onclick="startLocating()">
+        <div id="stop_button" data-role="button" data-inline="true" data-theme="b" style="display:none;" onclick="stopLocating()">
             I'm Done!
         </div>
     </div>
@@ -53,17 +49,31 @@
 
 	</div>
 </div>
+
 <div data-role="page" id="people">
 	<div data-role="header">
 		<h1>People Around Me</h1>
 	</div>
-	<div data-role="content">
-		<ul data-role="listview" data-filter="true">
-
+	<div data-role="content" class="gallery-bg">
+		<ul id="gallery" data-role="listview" data-filter="true">
+			<!--<li>
+				<div class="name">
+                	Roger Federer
+                </div>
+                <div class="number">
+                	1234567
+                </div>
+                <div class="car">
+					Tata Sumo
+                </div>
+                <div class="distance">
+					5000 miles
+                </div>
+            	<div class="image">
+            		<img src="./images/1.JPG">
+                </div>
+            </li>-->
         </ul>
-	</div>
-	<div data-role="footer">
-
 	</div>
 </div>
 
