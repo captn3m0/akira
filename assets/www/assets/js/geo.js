@@ -51,16 +51,13 @@ $(document).ready(function(){
 
 	function stopLocating(){clearInterval(interval);}
 	$.ajax({
-		url: $.config.home_site_root+'tracker/stop',
-		type: 'POST',
-		data:JSON.stringify(coordinate),
-		success:function(e){
-			alert(e);
-			alert("Request = success.");
-		},
-		error:function(){
-			alert("ERR");
+			url: $.config.home_site_root+'journey/end',
+			type: 'POST',
+			data:JSON.stringify(coordinate),
+			success:function(e){
 		}
 	});
+
+function distTravel(){};
 
 });

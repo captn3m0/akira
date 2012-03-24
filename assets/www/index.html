@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>jQuery Mobile Web App</title>
-<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
-<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Akira | Cars for socialites</title>
+	<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
+	<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
-<!--
-<div data-role="page" id="cover">
-	<div class="title">MATER</div>
+<!--<div data-role="page" id="cover">
+	<div class="title">Hello</div>
     <img class="load" src="images/load.png">
-</div>
--->
+</div>-->
 
 <div data-role="page" id="home">
 	<div class="header-bg" data-role="header">
-		<h1>MATER</h1>
+		<h1>AKIRA</h1>
 	</div>
 	<div data-role="content">
+
+        <div class="logo"></div>
         <ul class="choice" data-role="listview">
 			<li><a href="#journey">Start New Journey</a></li>
             <li><a href="#people">People Around Me</a></li>
-			<li><a href="#details">Add Car Details</a></li>
+			<li><a href="#details">Login</a></li>
 		</ul>
 
 	</div>
-	<div id="colors" data-role="footer">
+	<div id="colors" data-position="fixed">
     	<div id="first"></div>
         <div id="second"></div>
         <div id="third"></div>
         <div id="fourth"></div>
         <div id="fifth"></div>
-
 	</div>
 </div>
 
-<div data-role="page" id="journey">
+<div data-role="page" style="height:100%" id="journey">
 	<div data-role="header">
 		<h1>Start New Journey</h1>
 	</div>
-	<div data-role="content">
-		Content
-	</div>
-	<div data-role="footer">
+    <div data-role="content" style="height:100%;" align="center">
+        <div id="start_button" class="geo_button" data-role="button" data-inline="true" data-theme="b" onclick="startLocating()">
+            Get Rolling!
+        </div>
+        <div id="stop_button" data-role="button" data-inline="true" data-theme="b" style="display:none;" onclick="startLocating()">
+            I'm Done!
+        </div>
+    </div>
+
 
 	</div>
 </div>
-
 <div data-role="page" id="people">
 	<div data-role="header">
 		<h1>People Around Me</h1>
@@ -77,5 +81,6 @@
 <script src="./assets/js/config.js"></script>
 <script src="./assets/js/geo.js"></script>
 <script src="./assets/js/cordova-1.5.0.js"></script>
+<script src="./assets/js/main.js"></script>
 </body>
 </html>
