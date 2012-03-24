@@ -1,7 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
-#cover .title 
+/**
+ * Home Page
+ */
+.header-bg{
+	background:url('../img/header-bg.jpg');
+	max-height:200px;
+}
+#cover .title
 {
 	width: 100%;
 	margin-top: 25%;
@@ -76,3 +83,4 @@
 }
 
 .geo_button{width:200px;height:50px;margin-top:20%;align:center;font-size:20px;}
+
