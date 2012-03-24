@@ -2,7 +2,8 @@ $(document).ready(function(){
 	var interval;
 	var i=0;
 	var coordinate= new Array();
-
+	x="";
+	y="";
 
 	function startLocating(){
 		getLocation();
@@ -17,7 +18,7 @@ $(document).ready(function(){
 		// PhoneGap is ready
 
 		function onDeviceReady() {
-			var x=coordinate.length();
+			x=coordinate.length();
 			navigator.geolocation.getCurrentPosition(onSuccess, onError);
 		}
 
@@ -45,10 +46,30 @@ $(document).ready(function(){
 				  'message: ' + error.message + '\n');
 		}
 	
-		var y=coordinate.length();
+		var y=coordinate.length;
 	  }
 
-	if (x!=y){ajaxPost;}
+	if (x!=y){
+	
+	checkConnection = function (){
+        var networkState = navigator.network.connection.type;
+
+    /*    var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.NONE]     = 'No network connection';*/
+		if(networkState=="Connection.NONE"){
+			var coord = LawnChair(function(){
+				this.batch(coordinate,function(){console.log('coordinates stored');} //work on it
+				)});
+			}
+		else ajaxPost();}
+	}
+	
 	
 	function ajaxPost(){
 		console.log('ajax request sent');
@@ -68,4 +89,12 @@ $(document).ready(function(){
 	function distTravel(){};
 
 	function stopLocating(){clearInterval(interval);}
-}
+	
+	
+	
+
+
+
+
+  
+  
