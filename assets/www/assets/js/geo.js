@@ -51,10 +51,11 @@ $(document).ready(function(){
 
 	function stopLocating(){clearInterval(interval);}
 	$.ajax({
-		url: $.config.home_site_root+'',
+		url: $.config.home_site_root+'tracker/stop',
 		type: 'POST',
 		data:JSON.stringify(coordinate),
-		success:function(){
+		success:function(e){
+			alert(e);
 			alert("Request = success.");
 		},
 		error:function(){
