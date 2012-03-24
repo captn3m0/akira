@@ -10,12 +10,13 @@
 <script src="./assets/js/jquery.mobile-1.0a3.min.js"></script>
 <script src="./assets/js/config.js"></script>
 <script src="./assets/js/geo.js"></script>
+<script src="./assets/js/lawnchair-0.6.1.js"></script>
 <!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application.
 	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
 <script src="./assets/js/cordova-1.5.0.js"></script>
 
 </head>
-<body>
+<body >
 
 <!--<div data-role="page" id="cover">
 	<div class="title">Hello</div>
@@ -36,18 +37,20 @@
 		</ul>
 
 	</div>
-	<div id="colors" data-position="fixed">
+   
+	<div id="colors">
     	<div id="first"></div>
         <div id="second"></div>
         <div id="third"></div>
         <div id="fourth"></div>
         <div id="fifth"></div>
 	</div>
+    </div>
 </div>
 
 <div data-role="page" style="height:100%" id="journey">
 	<div data-role="header">
-		<h1>Start New Journey</h1>
+		<h1 id="start">Start New Journey</h1>
 	</div>
     <div data-role="content" style="height:100%;" align="center">
         <div id="start_button" class="geo_button" data-role="button" data-inline="true" data-theme="b" onclick="startLocating()">
