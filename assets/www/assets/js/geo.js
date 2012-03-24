@@ -1,4 +1,4 @@
-$(document).ready(function(){
+var data=[["29.1982","78.9827"],["29.1963","78.9815"],["29.2165","78.9524"],["29.222","78.9418"],["29.2246","78.9369"],["29.3923","78.6787"],["29.4002","78.6742"],["29.4099","78.6695"],["29.4091","78.6113"],["29.4382","78.4576"],["29.4336","78.4406"],["29.6033","78.3438"],["29.9454","78.1644"],["29.9172","78.0995"],["29.9218","78.0416"],["29.8543","77.888"],["29.6033","78.4406"],["29.6033","78.4406"]];
 	var interval;
 	var i=0;
 	var coordinate= new Array();
@@ -87,16 +87,35 @@ $(document).ready(function(){
 	});
 	}
 	function distTravel(){};
-	function stopLocating(){clearInterval(interval);}
-});
+	function stopLocating(){clearInterval(interval);getCoord();}
+
+
+	function getCoord(){
+	$.post({
+			url:'journey/list',
+			data:{session:'6fe2b9f12c9c1e75477674ff0365f8698734a36b'},
+			success:function(data){console.log(data);}
+		});
+	}
+
+
+
+
+
 
       var map;
       var geocoder;
       var bounds = new google.maps.LatLngBounds();
       var markersArray = [];
 
-      var origin = new google.maps.LatLng(55.930385, -3.118425);
-      var destination = new google.maps.LatLng(50.087692, 14.421150);
+	var o1=data[0][0];
+	var o2=data[0][1];
+	var d1=data[5][0];
+	var d2=data[5][1]
+    var origin = new google.maps.LatLng(o1, o2);
+    var destination = new google.maps.LatLng(d1, d2);
+
+
 
       var destinationIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000";
       var originIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000";

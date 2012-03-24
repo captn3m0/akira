@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 /* CSS Document */
 
@@ -189,3 +190,196 @@ body
 	position: absolute;
 	left: 310px;
 }
+=======
+@charset "utf-8";
+/* CSS Document */
+
+/**
+ * Home Page
+ */
+ 
+body
+{
+	background-color: black;	
+	
+}
+
+.header-bg
+{
+	background:url('../img/header-bg.jpg');
+}
+
+#toggle
+{
+	//display: none;
+}
+
+#home
+{
+	padding: 0px;!important
+}
+
+#home h1
+{
+	color: white;
+	margin: 10%;
+	font-size: 50px;
+	font-family: "Teen Light";
+}
+
+#home #colors
+{
+	height: 500px;
+	width: 100%;
+}
+
+#colors
+{
+	float: left;
+}
+
+#colors #first
+{
+	width: 20%;
+	height: 100%;
+	background-color: #ff0000;
+	float: left;
+}
+
+#colors #second
+{
+	width: 20%;
+	height: 100%;
+	background-color: #ffda91;
+	float: left;
+}
+
+#colors #third
+{
+	width: 20%;
+	height: 100%;
+	background-color: #47b26b;
+	float: left;
+}
+
+#colors #fourth
+{
+	width: 20%;
+	height: 100%;
+	background-color: #0066ff;
+	float: left;
+}
+
+#colors #fifth
+{
+	width: 20%;
+	height: 100%;
+	background-color: #003366;
+	float: left;
+}
+
+.geo_button{width:200px;height:50px;margin-top:20%;align:center;font-size:20px;}
+
+#people .gallery-bg
+{
+	background-color: black;
+	height: 400px;
+}
+
+#gallery img
+{
+	height: 100%;
+	padding: 2px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border-radius: 10px;
+}
+
+#gallery li 
+{
+	list-style: none;
+	float: left;
+	width: 310px;
+	height: 100px;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: #000;
+	border-radius: 20px;
+}
+
+.image
+{
+	width: 100px;
+	height: inherit;
+	border-right: 1px solid #dadada;
+}
+
+.name
+{
+	margin-left: 120px;
+	margin-top: 10px;
+	position: absolute;
+}
+
+.number
+{
+	color: #666666;
+	margin-left: 140px;
+	margin-top: 30px;
+	position: absolute;
+}
+
+.car
+{
+	color: #888888;
+	margin-left: 140px;
+	margin-top: 50px;
+	position: absolute;
+}
+
+.distance
+{
+	color: #aaaaaa;
+	margin-left: 140px;
+	margin-top: 70px;
+	position: absolute;
+}
+
+#hof img
+{
+	height: 100%;
+	padding: 2px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border-radius: 10px;
+}
+
+#hof li 
+{
+	float: left;
+	width: 310px;
+	height: 100px;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: #000;
+	border-radius: 20px;
+}
+
+#hof .gallery-bg
+{
+	background-color: black;
+	height: 400px;
+}
+
+#hof .rank
+{
+	position: absolute;
+	left: 310px;
+}
+>>>>>>> a2193c59678e8ebfa8c27f2e72c6001a00e1afc1
