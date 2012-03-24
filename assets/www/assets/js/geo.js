@@ -4,7 +4,9 @@ var coordinate= new Array();
 
 
 function startLocating(){
+	console.log('geolocation started');
 	//getLocation();
+
 	interval=setInterval(getLocation, 300000)}
 
 function getLocation(){
@@ -42,8 +44,8 @@ function getLocation(){
     // onError Callback receives a PositionError object
     //
     function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
+        // alert('code: '    + error.code    + '\n' +
+              // 'message: ' + error.message + '\n');
     }
 
   }
@@ -54,6 +56,8 @@ $.ajax({
 	url: '192.168.208.247/geo.php',
 	type: 'POST',
 	data:JSON.stringify(coordinate),
-	success:distTravel;
+	success:distTravel
 	});
+	
+function distTravel(){};
 
