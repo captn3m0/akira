@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 	var interval;
 	var i=0;
 	var coordinate= new Array();
