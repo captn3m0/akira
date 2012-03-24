@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 	var interval;
 	var i=0;
 	var coordinate= new Array();
@@ -92,14 +92,21 @@ $(document).ready(function(){
 
 	function stopLocating(){clearInterval(interval);}
 	
+	$.ajax({
+	//url:'/journey/list/?session=6fe2b9f12c9c1e75477674ff0365f8698734a36b',
+	url:'/journey/list/',
+	type:'POST',
+	success:function(data){console.log(data);}
+	});
+	
 	
       var map;
       var geocoder;
       var bounds = new google.maps.LatLngBounds();
       var markersArray = [];
       
-      var origin = new google.maps.LatLng(55.930385, -3.118425);
-      var destination = new google.maps.LatLng(50.087692, 14.421150);
+      var origin = new google.maps.LatLng(o1, o2);
+      var destination = new google.maps.LatLng(d1, d2);
 
       var destinationIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000";
       var originIcon = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000";
@@ -182,9 +189,3 @@ $(document).ready(function(){
           markersArray.length = 0;
         }
       }
-	
-
-
-
-  
-  
