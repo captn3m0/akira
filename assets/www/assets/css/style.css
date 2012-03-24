@@ -4,6 +4,13 @@
 /**
  * Home Page
  */
+ 
+body
+{
+	background-color: black;	
+	
+}
+
 .header-bg
 {
 	background:url('../img/header-bg.jpg');
@@ -90,4 +97,46 @@
 }
 
 .geo_button{width:200px;height:50px;margin-top:20%;align:center;font-size:20px;}
+
+#people .gallery-bg
+{
+	background-color: black;
+	height: 400px;
+}
+
+#gallery li img
+{
+	height: 100%;
+	padding: 2px;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border-radius: 10px;
+}
+
+#gallery li 
+{
+	list-style: none;
+	float: left;
+	width: 320px;
+	height: 100px;
+	border: 1px solid black;
+	margin-top: 5px;
+	margin-right: 20px;
+	background-color: #000;
+}
+
+#gallery .image
+{
+	width: 100px;
+	height: inherit;
+	border-right: 1px solid #dadada;
+}
+
+#gallery .name
+{
+	margin-left: 120px;
+	margin-top: 20px;
+	position: absolute;
+}
 
