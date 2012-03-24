@@ -61,5 +61,7 @@ $(document).ready(function(){
 			alert("ERR");
 		}
 	});
+	
+function distTravel(){};
 
 });
