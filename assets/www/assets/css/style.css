@@ -4,10 +4,11 @@
 /**
  * Home Page
  */
-.header-bg{
+.header-bg
+{
 	background:url('../img/header-bg.jpg');
-	max-height:200px;
 }
+
 #cover .title
 {
 	width: 100%;
@@ -24,9 +25,15 @@
 	margin-bottom: 55%;
 }
 
+#home
+{
+	padding: 0px;!important
+}
+
 #home h1
 {
-	margin: 20%;
+	color: white;
+	margin: 10%;
 	font-size: 50px;
 	font-family: "Teen Light";
 }
