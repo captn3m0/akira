@@ -16,22 +16,6 @@ body
 	background:url('../img/header-bg.jpg');
 }
 
-#cover .title
-{
-	width: 100%;
-	margin-top: 25%;
-	text-align: center;
-	font-family: "Teen Light";
-	font-size: 50px;
-}
-
-#cover .load
-{
-	margin-left: 45%;
-	margin-top: 10%;
-	margin-bottom: 55%;
-}
-
 #home
 {
 	padding: 0px;!important
@@ -104,7 +88,7 @@ body
 	height: 400px;
 }
 
-#gallery li img
+#gallery img
 {
 	height: 100%;
 	padding: 2px;
@@ -118,12 +102,14 @@ body
 {
 	list-style: none;
 	float: left;
-	width: 320px;
+	width: 310px;
 	height: 100px;
 	border: 1px solid black;
-	margin-top: 5px;
-	margin-right: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
 	background-color: #000;
+	border-radius: 20px;
 }
 
 #gallery .image
@@ -136,7 +122,30 @@ body
 #gallery .name
 {
 	margin-left: 120px;
-	margin-top: 20px;
+	margin-top: 10px;
 	position: absolute;
 }
 
+#gallery .number
+{
+	color: #666666;
+	margin-left: 140px;
+	margin-top: 30px;
+	position: absolute;
+}
+
+#gallery .car
+{
+	color: #888888;
+	margin-left: 140px;
+	margin-top: 50px;
+	position: absolute;
+}
+
+#gallery .distance
+{
+	color: #aaaaaa;
+	margin-left: 140px;
+	margin-top: 70px;
+	position: absolute;
+}
