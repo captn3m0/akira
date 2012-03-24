@@ -45,12 +45,12 @@ $(document).ready(function(){
 			alert('code: '    + error.code    + '\n' +
 				  'message: ' + error.message + '\n');
 		}
-	
+
 		var y=coordinate.length;
 	  }
 
 	if (x!=y){
-	
+
 	checkConnection = function (){
         var networkState = navigator.network.connection.type;
 
@@ -69,12 +69,11 @@ $(document).ready(function(){
 			}
 		else ajaxPost();}
 	}
-	
-	
+
 	function ajaxPost(){
 		console.log('ajax request sent');
 		$.ajax({
-		url: $.config.home_site_root+'',
+		url: 'journey/ping',
 		type: 'POST',
 		data:JSON.stringify(coordinate),
 		success:function(){
@@ -85,16 +84,7 @@ $(document).ready(function(){
 		}
 	});
 	}
-	
+
 	function distTravel(){};
-
 	function stopLocating(){clearInterval(interval);}
-	
-	
-	
-
-
-
-
-  
-  
+});
