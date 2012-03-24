@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Akira | Cars for socialites</title>
 	<link href="./assets/css/jquery-mobile.css" rel="stylesheet" type="text/css"/>
 	<link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
+	<title>Akira | Cars for socialites</title>
 </head>
 <body >
 
@@ -54,6 +54,8 @@
         <div id="stop_button" data-role="button" data-inline="true" data-theme="b" style="display:none;" onclick="stopLocating()">
             I'm Done!
         </div>
+		<div id="outputDiv"></div>
+		<div id="map" style="top:30px;width:50%;height:50%"></div>
     </div>
 
 
@@ -131,6 +133,7 @@
 <script src="./assets/js/jquery-1.5.min.js"></script>
 <script src="./assets/js/jquery.mobile-1.0a3.min.js"></script>
 <script src="./assets/js/config.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="./assets/js/geo.js"></script>
 <script src="./assets/js/cordova-1.5.0.js"></script>
 <script src="./assets/js/main.js"></script>
